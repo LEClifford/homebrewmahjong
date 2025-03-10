@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css'
 import WelcomePage from './components/WelcomePage';
 import CreateRoom from './components/CreateRoom';
@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<WelcomePage />} />
         <Route path="/create" element={<CreateRoom />} />
         <Route path="/join" element={<JoinRoom />} />
+        <Route path="/game/:roomCode" element={<GameRoom />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
