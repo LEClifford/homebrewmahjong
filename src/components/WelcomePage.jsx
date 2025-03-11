@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function WelcomePage () {
     return (
@@ -10,10 +11,18 @@ function WelcomePage () {
                 If you want to join a room, enter the code and join the game.
                 You can play without signing up, but you won't be able to save your progress.
             </p>
-            <button>Host Room</button>
-            <button>Join Room</button>
-            <button>Log In</button>
-            <button>Sign Up</button>
+            <Link to="/create-room">
+        <button>Create Room</button>
+      </Link>
+      <Link to="/join-room">
+        <button>Join Room</button>
+      </Link>
+      <Link to="/login">
+        <button>Login</button>
+      </Link>
+      <Link to="/signup">
+        <button>Sign Up</button>
+      </Link>
         </div>
     );
 }
